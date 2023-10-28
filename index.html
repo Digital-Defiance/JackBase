@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <title>JackBase</title>
     <script src="jackbase.js" defer></script>
+    <style>
+      body {
+        background-color: black;
+        color: #ffffff;
+      }
+    </style>
   </head>
   <body>
     <h1>JackBase: JackBox Database</h1>
@@ -12,11 +18,15 @@
     <div>
       <label for="title">Title:</label>
       <input type="text" id="title" />
+
       <label for="numPlayers">Number of Players:</label>
       <input type="number" id="numPlayers" min="1" />
 
       <label for="gameTime">Max Game Time (minutes):</label>
       <input type="number" id="gameTime" min="1" />
+
+      <label for="pack">Pack:</label>
+      <input type="number" id="pack" min="1" max="10" />
 
       <button id="filterButton">Filter Games</button>
     </div>

@@ -519,6 +519,12 @@ function filterByTitle(data, title) {
   });
 }
 
+function filterByPack(data, pack) {
+  return data.filter(function (d) {
+    return d.Pack === pack;
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const gameListContainer = document.getElementById("gameList");
   const filterButton = document.getElementById("filterButton");
@@ -540,6 +546,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }</p>
           `;
       gameListContainer.appendChild(gameElement);
+      gameListContainer.appendChild(document.createElement("hr"));
     });
   }
 
@@ -549,6 +556,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameTime =
       parseInt(document.getElementById("gameTime").value, 10) || 0;
     const title = document.getElementById("title").value;
+    const pack = parseInt(document.getElementById("pack").value, 10) || 0;
 
     let filteredGames = jackBase;
     if (numPlayers > 0) {
@@ -559,6 +567,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     if (title && title.length > 0) {
       filteredGames = filterByTitle(filteredGames, title);
+    }
+    if (pack > 0) {
+      filteredGames = filterByPack(filteredGames, pack);
     }
 
     renderGames(filteredGames);
