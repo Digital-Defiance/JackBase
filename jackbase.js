@@ -1,8 +1,7 @@
 const jackBase = [
   {
     Game: "You Don't Know Jack",
-    Pack: "1",
-    Players: "1-4",
+    Pack: 1,
     Time: 20,
     Category: "Trivia",
     Description:
@@ -12,8 +11,7 @@ const jackBase = [
   },
   {
     Game: "Fibbage XL",
-    Pack: "1",
-    Players: "2-8",
+    Pack: 1,
     Time: 15,
     Category: "Deception",
     Description:
@@ -23,8 +21,7 @@ const jackBase = [
   },
   {
     Game: "Drawful",
-    Pack: "1",
-    Players: "3-8",
+    Pack: 1,
     Time: 15,
     Category: "Drawing",
     Description:
@@ -34,8 +31,7 @@ const jackBase = [
   },
   {
     Game: "Lie Swatter",
-    Pack: "1",
-    Players: "1-100",
+    Pack: 1,
     Time: null,
     Category: "True or False",
     Description:
@@ -45,8 +41,7 @@ const jackBase = [
   },
   {
     Game: "Word Spud",
-    Pack: "1",
-    Players: "2-8",
+    Pack: 1,
     Time: null,
     Category: "Writing",
     Description:
@@ -56,8 +51,7 @@ const jackBase = [
   },
   {
     Game: "EarWax",
-    Pack: "2",
-    Players: "3-8",
+    Pack: 2,
     Time: 15,
     Category: "Musical",
     Description:
@@ -67,8 +61,7 @@ const jackBase = [
   },
   {
     Game: "Fibbage 2",
-    Pack: "2",
-    Players: "2-8",
+    Pack: 2,
     Time: 15,
     Category: "Deception",
     Description:
@@ -78,8 +71,7 @@ const jackBase = [
   },
   {
     Game: "Bidiots",
-    Pack: "2",
-    Players: "3-6",
+    Pack: 2,
     Time: 15,
     Category: "Drawing",
     Description:
@@ -89,8 +81,7 @@ const jackBase = [
   },
   {
     Game: "Quiplash XL",
-    Pack: "2",
-    Players: "3-8",
+    Pack: 2,
     Time: 15,
     Category: "Writing",
     Description:
@@ -100,8 +91,7 @@ const jackBase = [
   },
   {
     Game: "Bomb Corp",
-    Pack: "2",
-    Players: "1-4",
+    Pack: 2,
     Time: 15,
     Category: "Puzzle",
     Description:
@@ -111,8 +101,7 @@ const jackBase = [
   },
   {
     Game: "Tee K.O.",
-    Pack: "3",
-    Players: "3-8",
+    Pack: 3,
     Time: 30,
     Category: "Drawing",
     Description:
@@ -122,8 +111,7 @@ const jackBase = [
   },
   {
     Game: "Quiplash 2",
-    Pack: "3",
-    Players: "3-8",
+    Pack: 3,
     Time: 15,
     Category: "Writing",
     Description:
@@ -133,8 +121,7 @@ const jackBase = [
   },
   {
     Game: "Trivia Murder Party",
-    Pack: "3",
-    Players: "1-8",
+    Pack: 3,
     Time: 15,
     Category: "Trivia",
     Description:
@@ -144,8 +131,7 @@ const jackBase = [
   },
   {
     Game: "Fakin' It",
-    Pack: "3",
-    Players: "3-6",
+    Pack: 3,
     Time: 15,
     Category: "Deception",
     Description:
@@ -155,8 +141,7 @@ const jackBase = [
   },
   {
     Game: "Guesspionage",
-    Pack: "3",
-    Players: "2-8",
+    Pack: 3,
     Time: 15,
     Category: "Voting",
     Description:
@@ -166,8 +151,7 @@ const jackBase = [
   },
   {
     Game: "Fibbage 3",
-    Pack: "4",
-    Players: "2-8",
+    Pack: 4,
     Time: 15,
     Category: "Deception",
     Description:
@@ -177,8 +161,7 @@ const jackBase = [
   },
   {
     Game: "Survive the Internet",
-    Pack: "4",
-    Players: "3-8",
+    Pack: 4,
     Time: 20,
     Category: "Writing",
     Description:
@@ -188,8 +171,7 @@ const jackBase = [
   },
   {
     Game: "Monster Seeking Monster",
-    Pack: "4",
-    Players: "3-7",
+    Pack: 4,
     Time: 15,
     Category: "Dating Game",
     Description:
@@ -199,8 +181,7 @@ const jackBase = [
   },
   {
     Game: "Civic Doodle",
-    Pack: "4",
-    Players: "3-8",
+    Pack: 4,
     Time: 20,
     Category: "Drawing",
     Description:
@@ -210,8 +191,7 @@ const jackBase = [
   },
   {
     Game: "Bracketeering",
-    Pack: "4",
-    Players: "3-16",
+    Pack: 4,
     Time: 15,
     Category: "Voting",
     Description:
@@ -221,8 +201,7 @@ const jackBase = [
   },
   {
     Game: "Mad Verse City",
-    Pack: "5",
-    Players: "3-8",
+    Pack: 5,
     Time: 15,
     Category: "Musical",
     Description:
@@ -232,8 +211,7 @@ const jackBase = [
   },
   {
     Game: "You Don't Know Jack: Full Stream",
-    Pack: "5",
-    Players: "1-8",
+    Pack: 5,
     Time: 15,
     Category: "Trivia",
     Description:
@@ -243,8 +221,7 @@ const jackBase = [
   },
   {
     Game: "Split the Room",
-    Pack: "5",
-    Players: "3-8",
+    Pack: 5,
     Time: 15,
     Category: "Writing",
     Description:
@@ -254,8 +231,7 @@ const jackBase = [
   },
   {
     Game: "Patently Stupid",
-    Pack: "5",
-    Players: "3-8",
+    Pack: 5,
     Time: 20,
     Category: "Drawing",
     Description:
@@ -265,8 +241,7 @@ const jackBase = [
   },
   {
     Game: "Zeeple Dome",
-    Pack: "5",
-    Players: "1-6",
+    Pack: 5,
     Time: 10,
     Category: "Skill",
     Description:
@@ -276,8 +251,7 @@ const jackBase = [
   },
   {
     Game: "Role Models",
-    Pack: "6",
-    Players: "3-6",
+    Pack: 6,
     Time: 15,
     Category: "Voting",
     Description:
@@ -287,8 +261,7 @@ const jackBase = [
   },
   {
     Game: "Push the Button",
-    Pack: "6",
-    Players: "4-10",
+    Pack: 6,
     Time: 20,
     Category: "Deception",
     Description:
@@ -298,8 +271,7 @@ const jackBase = [
   },
   {
     Game: "Joke Boat",
-    Pack: "6",
-    Players: "3-8",
+    Pack: 6,
     Time: 15,
     Category: "Speaking",
     Description:
@@ -309,8 +281,7 @@ const jackBase = [
   },
   {
     Game: "Trivia Murder Party 2",
-    Pack: "6",
-    Players: "1-8",
+    Pack: 6,
     Time: 15,
     Category: "Trivia",
     Description:
@@ -320,8 +291,7 @@ const jackBase = [
   },
   {
     Game: "dictionarium",
-    Pack: "6",
-    Players: "3-8",
+    Pack: 6,
     Time: 10,
     Category: "Writing",
     Description:
@@ -331,8 +301,7 @@ const jackBase = [
   },
   {
     Game: "The Devils and the Details",
-    Pack: "7",
-    Players: "3-8",
+    Pack: 7,
     Time: 15,
     Category: "Puzzle",
     Description:
@@ -342,8 +311,7 @@ const jackBase = [
   },
   {
     Game: "Champ'd Up",
-    Pack: "7",
-    Players: "3-8",
+    Pack: 7,
     Time: 20,
     Category: "Drawing",
     Description:
@@ -353,8 +321,7 @@ const jackBase = [
   },
   {
     Game: "Talking Points",
-    Pack: "7",
-    Players: "3-8",
+    Pack: 7,
     Time: 20,
     Category: "Speaking",
     Description:
@@ -364,8 +331,7 @@ const jackBase = [
   },
   {
     Game: "Quiplash 3",
-    Pack: "7",
-    Players: "3-8",
+    Pack: 7,
     Time: 15,
     Category: "Writing",
     Description:
@@ -375,8 +341,7 @@ const jackBase = [
   },
   {
     Game: "Blather 'Round",
-    Pack: "7",
-    Players: "2-6",
+    Pack: 7,
     Time: 15,
     Category: "Trivia",
     Description:
@@ -386,8 +351,7 @@ const jackBase = [
   },
   {
     Game: "Job Job",
-    Pack: "8",
-    Players: "3-10",
+    Pack: 8,
     Time: 20,
     Category: "Writing",
     Description:
@@ -397,8 +361,7 @@ const jackBase = [
   },
   {
     Game: "Weapons Drawn",
-    Pack: "8",
-    Players: "4-8",
+    Pack: 8,
     Time: 20,
     Category: "Drawing",
     Description:
@@ -408,8 +371,7 @@ const jackBase = [
   },
   {
     Game: "Drawful: Animate",
-    Pack: "8",
-    Players: "3-10",
+    Pack: 8,
     Time: 15,
     Category: "Drawing",
     Description:
@@ -419,8 +381,7 @@ const jackBase = [
   },
   {
     Game: "The Poll Mine",
-    Pack: "8",
-    Players: "2-10",
+    Pack: 8,
     Time: 15,
     Category: "Voting",
     Description:
@@ -430,8 +391,7 @@ const jackBase = [
   },
   {
     Game: "The Wheel of Enormous Proportions",
-    Pack: "8",
-    Players: "3-8",
+    Pack: 8,
     Time: 15,
     Category: "Trivia",
     Description:
@@ -441,8 +401,7 @@ const jackBase = [
   },
   {
     Game: "Junktopia",
-    Pack: "9",
-    Players: "3-8",
+    Pack: 9,
     Time: 20,
     Category: "Writing",
     Description:
@@ -452,8 +411,7 @@ const jackBase = [
   },
   {
     Game: "Quixort",
-    Pack: "9",
-    Players: "1-10",
+    Pack: 9,
     Time: 20,
     Category: "Trivia",
     Description:
@@ -463,8 +421,7 @@ const jackBase = [
   },
   {
     Game: "Roomerang",
-    Pack: "9",
-    Players: "4-9",
+    Pack: 9,
     Time: 30,
     Category: "Writing",
     Description:
@@ -474,8 +431,7 @@ const jackBase = [
   },
   {
     Game: "Nonsensory",
-    Pack: "9",
-    Players: "3-8",
+    Pack: 9,
     Time: 25,
     Category: "Writing",
     Description:
@@ -485,8 +441,7 @@ const jackBase = [
   },
   {
     Game: "Fibbage 4",
-    Pack: "9",
-    Players: "3-8",
+    Pack: 9,
     Time: 20,
     Category: "Deception",
     Description:
@@ -496,8 +451,7 @@ const jackBase = [
   },
   {
     Game: "Fixy Text",
-    Pack: "10",
-    Players: "3-8",
+    Pack: 10,
     Time: 15,
     Category: "Writing",
     Description:
@@ -507,8 +461,7 @@ const jackBase = [
   },
   {
     Game: "Tee K.O. 2",
-    Pack: "10",
-    Players: "3-8",
+    Pack: 10,
     Time: 20,
     Category: "Drawing",
     Description:
@@ -518,8 +471,7 @@ const jackBase = [
   },
   {
     Game: "DodoReMi",
-    Pack: "10",
-    Players: "1-9",
+    Pack: 10,
     Time: 5,
     Category: "Musical",
     Description:
@@ -529,8 +481,7 @@ const jackBase = [
   },
   {
     Game: "Time Jinx",
-    Pack: "10",
-    Players: "1-8",
+    Pack: 10,
     Time: 20,
     Category: "Trivia",
     Description:
@@ -540,8 +491,7 @@ const jackBase = [
   },
   {
     Game: "Hypnotorious",
-    Pack: "10",
-    Players: "4-8",
+    Pack: 10,
     Time: 20,
     Category: "Deception",
     Description:
@@ -563,6 +513,12 @@ function filterByTime(data, time) {
   });
 }
 
+function filterByTitle(data, title) {
+  return data.filter(function (d) {
+    return d.Game.toLowerCase().includes(title.toLowerCase());
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const gameListContainer = document.getElementById("gameList");
   const filterButton = document.getElementById("filterButton");
@@ -576,9 +532,10 @@ document.addEventListener("DOMContentLoaded", function () {
       gameElement.innerHTML = `
               <h2>${game.Game}</h2>
               <p>${game.Description}</p>
-              <p><strong>Players:</strong> ${
-                game.Players
-              } | <strong>Time:</strong> ${
+              <p>JackBox Pack ${game.Pack}</p>
+              <p><strong>Players:</strong> ${game.minPlayers}-${
+        game.maxPlayers
+      } | <strong>Time:</strong> ${
         game.Time ? game.Time + " minutes" : "N/A"
       }</p>
           `;
@@ -591,6 +548,7 @@ document.addEventListener("DOMContentLoaded", function () {
       parseInt(document.getElementById("numPlayers").value, 10) || 0;
     const gameTime =
       parseInt(document.getElementById("gameTime").value, 10) || 0;
+    const title = document.getElementById("title").value;
 
     let filteredGames = jackBase;
     if (numPlayers > 0) {
@@ -598,6 +556,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     if (gameTime > 0) {
       filteredGames = filterByTime(filteredGames, gameTime);
+    }
+    if (title && title.length > 0) {
+      filteredGames = filterByTitle(filteredGames, title);
     }
 
     renderGames(filteredGames);
