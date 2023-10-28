@@ -562,10 +562,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameTime =
       parseInt(document.getElementById("gameTime").value, 10) || 0;
     const title = document.getElementById("title").value;
-    const packs = document
-      .getElementById("packs")
-      .value.split(",")
-      .map((p) => parseInt(p.trim(), 10));
+    const packInput = document.getElementById("packs").value.trim();
+    let packs = [];
+
+    // If 'packInput' is not empty, split and parse it.
+    if (packInput) {
+      packs = packInput.split(",").map((p) => parseInt(p.trim(), 10));
+
+      // Filter out NaN values if the input was not a number.
+      packs = packs.filter((num) => !isNaN(num));
+    }
 
     let filteredGames = jackBase;
     if (numPlayers > 0) {
