@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JackBase</title>
+    <script src="jackbase.js" defer></script>
+  </head>
+  <body>
+    <h1>JackBase: JackBox Database</h1>
+
+    <!-- Form for filtering results -->
+    <div>
+      <label for="numPlayers">Number of Players:</label>
+      <input type="number" id="numPlayers" min="1" />
+
+      <label for="gameTime">Max Game Time (minutes):</label>
+      <input type="number" id="gameTime" min="1" />
+
+      <button id="filterButton">Filter Games</button>
+    </div>
+
+    <!-- Container where the game list will be displayed -->
+    <div id="gameList"></div>
+  </body>
+</html>
