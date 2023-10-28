@@ -9,6 +9,15 @@
         background-color: black;
         color: #ffffff;
       }
+      table tr th {
+        text-align: right;
+      }
+      table tr td input {
+        width: 200px;
+      }
+      table tr td select {
+        width: 207px;
+      }
     </style>
   </head>
   <body>
@@ -16,26 +25,37 @@
 
     <!-- Form for filtering results -->
     <div>
-      <label for="title">Title:</label>
-      <input type="text" id="title" />
-
-      <label for="numPlayers">Number of Players:</label>
-      <input type="number" id="numPlayers" min="1" />
-
-      <label for="gameTime">Max Game Time (minutes):</label>
-      <input type="number" id="gameTime" min="1" />
-
-      <label for="packs">Packs:</label>
-      <input
-        type="text"
-        id="packs"
-        title='Comma separated pack numbers, eg "1,2"'
-      />
-
-      <button id="filterButton">Filter Games</button>
+      <table>
+        <tr>
+          <th><label for="title">Title:</label></th>
+          <td><input type="text" id="title" /></td>
+        </tr>
+        <tr>
+          <th><label for="numPlayers">Number of Players:</label></th>
+          <td><input type="number" id="numPlayers" min="1" /></td>
+        </tr>
+        <tr>
+          <th><label for="gameTime">Max Game Time (minutes):</label></th>
+          <td><input type="number" id="gameTime" min="1" /></td>
+        </tr>
+        <tr>
+          <th><label for="packs">Packs:</label></th>
+          <td>
+            <select name="packs" id="packs" multiple></select>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="categories">Categories:</label></th>
+          <td><select name="categories" id="categories" multiple></select></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: right">
+            <button id="filterButton">Filter Games</button>
+          </td>
+        </tr>
+      </table>
     </div>
 
-    <!-- Container where the game list will be displayed -->
     <div id="gameList"></div>
   </body>
 </html>
