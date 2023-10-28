@@ -525,6 +525,12 @@ function filterByPack(data, pack) {
   });
 }
 
+function filterByPacks(data, packs) {
+  return data.filter(function (d) {
+    return packs.includes(d.Pack);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const gameListContainer = document.getElementById("gameList");
   const filterButton = document.getElementById("filterButton");
@@ -556,7 +562,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameTime =
       parseInt(document.getElementById("gameTime").value, 10) || 0;
     const title = document.getElementById("title").value;
-    const pack = parseInt(document.getElementById("pack").value, 10) || 0;
+    const packs = document
+      .getElementById("packs")
+      .value.split(",")
+      .map((p) => parseInt(p.trim(), 10));
 
     let filteredGames = jackBase;
     if (numPlayers > 0) {
@@ -568,8 +577,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (title && title.length > 0) {
       filteredGames = filterByTitle(filteredGames, title);
     }
-    if (pack > 0) {
-      filteredGames = filterByPack(filteredGames, pack);
+    if (packs.length > 0) {
+      filteredGames = filterByPacks(filteredGames, packs);
     }
 
     renderGames(filteredGames);
