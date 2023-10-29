@@ -550,6 +550,8 @@ const jackBase = [
     url: "https://www.jackboxgames.com/games/hypnotorious",
   },
 ];
+const packUrlBase =
+  "https://www.jackboxgames.com/games/the-jackbox-party-pack-";
 
 function filterByPlayers(data, players) {
   return data.filter(function (d) {
@@ -660,7 +662,11 @@ document.addEventListener("DOMContentLoaded", function () {
       infoBoxElement.appendChild(categoryElement);
       // pack
       packElement = document.createElement("p");
-      packElement.textContent = `JackBox Pack ${game.Pack}`;
+      packAnchor = document.createElement("a");
+      packAnchor.setAttribute("href", `${packUrlBase}${game.Pack}`);
+      packAnchor.setAttribute("target", "_new");
+      packAnchor.textContent = `JackBox Pack ${game.Pack}`;
+      packElement.appendChild(packAnchor);
       infoBoxElement.appendChild(packElement);
       gameElement.appendChild(infoBoxElement);
       gameListContainer.appendChild(gameElement);
