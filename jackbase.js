@@ -593,18 +593,20 @@ function getCategories(data) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  const gameCategories = getCategories(jackBase);
   const gameListContainer = document.getElementById("gameList");
   const filterButton = document.getElementById("filterButton");
-  const gameCategories = getCategories(jackBase);
-
+  const resetButton = document.getElementById("reset");
   const packsSelect = document.getElementById("packs");
+  const categoriesSelect = document.getElementById("categories");
+
   for (let pack = 1; pack <= 10; pack++) {
     const option = document.createElement("option");
     option.value = pack;
     option.textContent = pack;
     packsSelect.appendChild(option);
   }
-  const categoriesSelect = document.getElementById("categories");
+
   for (const category of gameCategories) {
     const option = document.createElement("option");
     option.value = category;
@@ -711,9 +713,22 @@ document.addEventListener("DOMContentLoaded", function () {
     renderGames(filteredGames);
   }
 
+  function resetFilters() {
+    document.getElementById("numPlayers").value = "";
+    document.getElementById("gameTime").value = "";
+    document.getElementById("title").value = "";
+    document.getElementById("packs").selectedIndex = -1; // Deselect all options
+    document.getElementById("categories").selectedIndex = -1; // Deselect all options
+  }
+
   // Initial render of games
   renderGames(jackBase);
 
   // Setup filter button click event
   filterButton.addEventListener("click", handleFilterGames);
+  // setup reset button click event
+  resetButton.addEventListener("click", () => {
+    resetFilters();
+    handleFilterGames();
+  });
 });

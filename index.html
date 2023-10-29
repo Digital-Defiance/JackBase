@@ -5,8 +5,95 @@
     <title>JackBase</title>
     <script src="jackbase.js" defer></script>
     <style>
+      :root {
+        --breakpoint-xsmall: 599px;
+        --breakpoint-small: 959px;
+        --breakpoint-medium: 1264px;
+        --breakpoint-large: 1904px;
+        --surface-50: #3a3c43;
+        --surface-100: #373a41;
+        --surface-200: #35373e;
+        --surface-300: #30333a;
+        --surface-400: #2e3138;
+        --surface-500: #292c33;
+        --surface-600: #272a31;
+        --surface-700: #24272f;
+        --surface-800: #1a1f26;
+        --surface-900: #14171f;
+        --neutral-50: #f7f8f9;
+        --neutral-100: #e7eaee;
+        --neutral-200: #d0d5dd;
+        --neutral-300: #b8c0cc;
+        --neutral-400: #a0abbb;
+        --neutral-500: #64748b;
+        --neutral-600: #515e71;
+        --neutral-700: #323a46;
+        --neutral-800: #191d23;
+        --neutral-900: #0d0f11;
+        --primary-50: #f2f4ff;
+        --primary-100: #e0e4fd;
+        --primary-200: #b2bbff;
+        --primary-300: #8c99fe;
+        --primary-400: #6577fe;
+        --primary-500: #3f55fe;
+        --primary-600: #0e28f2;
+        --primary-700: #061cc6;
+        --primary-800: #000d74;
+        --primary-900: #020b4b;
+        --green-50: #f6fbf6;
+        --green-100: #d4ecd5;
+        --green-200: #b2ddb4;
+        --green-300: #90cd93;
+        --green-400: #6ebe71;
+        --green-500: #4caf50;
+        --green-600: #419544;
+        --green-700: #357b38;
+        --green-800: #2a602c;
+        --green-900: #1e4620;
+        --yellow-50: #fffcf5;
+        --yellow-100: #fef0cd;
+        --yellow-200: #fde4a5;
+        --yellow-300: #fdd87d;
+        --yellow-400: #fccc55;
+        --yellow-500: #fbc02d;
+        --yellow-600: #d5a326;
+        --yellow-700: #b08620;
+        --yellow-800: #8a6a19;
+        --yellow-900: #644d12;
+        --red-50: #fff5f5;
+        --red-100: #ffd1ce;
+        --red-200: #ffada7;
+        --red-300: #ff8980;
+        --red-400: #ff6459;
+        --red-500: #ff4032;
+        --red-600: #d9362b;
+        --red-700: #b32d23;
+        --red-800: #8c231c;
+        --red-900: #661a14;
+        --alt-blue-50: #f4fafe;
+        --alt-blue-100: #cae6fc;
+        --alt-blue-200: #a0d2fa;
+        --alt-blue-300: #75bef8;
+        --alt-blue-400: #4baaf5;
+        --alt-blue-500: #2196f3;
+        --alt-blue-600: #1c80cf;
+        --alt-blue-700: #1769aa;
+        --alt-blue-800: #125386;
+        --alt-blue-900: #0d3c61;
+        --active-tab: #4d578c;
+        --hover-tab: #404560;
+        --disabled-primary: #a5a9ca;
+        --shade-0: #ffffff;
+        --shade-100: #000000;
+      }
       body {
-        background-color: black;
+        background-color: #181c23;
+        background: linear-gradient(
+          180deg,
+          var(--surface-800) 7%,
+          #181c23 36%,
+          var(--surface-900) 71%
+        );
         color: #ffffff;
       }
       table tr th {
@@ -29,6 +116,13 @@
       .game .info p:not(:last-child)::after {
         content: "|";
         margin: 0 5px;
+      }
+      .game h2 a {
+        color: white;
+        text-decoration: none;
+      }
+      .game h2 a:hover {
+        text-decoration: underline;
       }
       hr {
         margin-top: 20px;
@@ -61,11 +155,14 @@
         </tr>
         <tr>
           <th><label for="categories">Categories:</label></th>
-          <td><select name="categories" id="categories" multiple></select></td>
+          <td>
+            <select name="categories" id="categories" multiple></select>
+          </td>
         </tr>
         <tr>
           <td colspan="2" style="text-align: right">
-            <button id="filterButton">Filter Games</button>
+            <button id="reset" type="button">Reset</button>
+            <button id="filterButton" type="button">Filter Games</button>
           </td>
         </tr>
       </table>
