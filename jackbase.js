@@ -618,17 +618,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
     games.forEach(function (game) {
       const gameElement = document.createElement("div");
-      gameElement.innerHTML = `
-              <h2><a href="${game.url}" target="_new">${game.Game}</a></h2>
-              <p>${game.Description}</p>
-              <p>JackBox Pack ${game.Pack}</p>
-              <p><strong>Players:</strong> ${game.minPlayers}-${
-        game.maxPlayers
-      } | <strong>Time:</strong> ${
-        game.Time ? game.Time + " minutes" : "N/A"
-      }</p>
-              <p>${game.Category}</p>
-          `;
+      gameElement.className = "game";
+      // title
+      const titleElement = document.createElement("h2");
+      const anchorElement = document.createElement("a");
+      anchorElement.setAttribute("href", game.url);
+      anchorElement.setAttribute("target", "_new");
+      anchorElement.textContent = game.Game;
+      titleElement.appendChild(anchorElement);
+      gameElement.appendChild(titleElement);
+      // description
+      descriptionElement = document.createElement("p");
+      descriptionElement.textContent = game.Description;
+      gameElement.appendChild(descriptionElement);
+      // info box
+      infoBoxElement = document.createElement("div");
+      infoBoxElement.className = "info";
+      // players
+      playersElement = document.createElement("p");
+      playersLabel = document.createElement("strong");
+      playersLabel.textContent = "Players: ";
+      playersElement.appendChild(playersLabel);
+      playersCountLabel = document.createElement("div");
+      playersCountLabel.textContent = `${game.minPlayers}-${game.maxPlayers}`;
+      playersElement.appendChild(playersCountLabel);
+      infoBoxElement.appendChild(playersElement);
+      // time
+      timeElement = document.createElement("p");
+      timeLabel = document.createElement("strong");
+      timeLabel.textContent = "Time: ";
+      timeElement.appendChild(timeLabel);
+      timeValueLabel = document.createElement("div");
+      timeValueLabel.textContent = game.Time ? game.Time + " minutes" : "N/A";
+      timeElement.appendChild(timeValueLabel);
+      infoBoxElement.appendChild(timeElement);
+      // category
+      categoryElement = document.createElement("p");
+      categoryElement.textContent = game.Category;
+      infoBoxElement.appendChild(categoryElement);
+      // pack
+      packElement = document.createElement("p");
+      packElement.textContent = `JackBox Pack ${game.Pack}`;
+      infoBoxElement.appendChild(packElement);
+      gameElement.appendChild(infoBoxElement);
       gameListContainer.appendChild(gameElement);
       gameListContainer.appendChild(document.createElement("hr"));
     });
